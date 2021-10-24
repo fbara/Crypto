@@ -22,6 +22,9 @@
 		AD992E992721FC0600699A1E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD992E982721FC0600699A1E /* HomeView.swift */; };
 		AD992E9D2721FCFD00699A1E /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD992E9C2721FCFC00699A1E /* CircleButtonView.swift */; };
 		AD992E9F27220DFF00699A1E /* CircleButtonAnimationView.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD992E9E27220DFF00699A1E /* CircleButtonAnimationView.swift.swift */; };
+		ADAA89092725BB3600748823 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA89082725BB3600748823 /* CoinImageView.swift */; };
+		ADAA890B2725BCA900748823 /* CoinImageService.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA890A2725BCA900748823 /* CoinImageService.swift.swift */; };
+		ADAA890D2725BE3200748823 /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA890C2725BE3200748823 /* CoinImageViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,9 @@
 		AD992E982721FC0600699A1E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AD992E9C2721FCFC00699A1E /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		AD992E9E27220DFF00699A1E /* CircleButtonAnimationView.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonAnimationView.swift.swift; sourceTree = "<group>"; };
+		ADAA89082725BB3600748823 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
+		ADAA890A2725BCA900748823 /* CoinImageService.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift.swift; sourceTree = "<group>"; };
+		ADAA890C2725BE3200748823 /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				AD68EF4327233A0500EAC25A /* CoinDataService.swift */,
+				ADAA890A2725BCA900748823 /* CoinImageService.swift.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -131,6 +138,7 @@
 		AD992E942721FBD900699A1E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				ADAA89072725BB2100748823 /* CoinImage */,
 				AD992E9A2721FCD800699A1E /* Components */,
 				AD992E952721FBE700699A1E /* Home */,
 			);
@@ -178,6 +186,15 @@
 				AD992E9E27220DFF00699A1E /* CircleButtonAnimationView.swift.swift */,
 			);
 			path = CircleButton;
+			sourceTree = "<group>";
+		};
+		ADAA89072725BB2100748823 /* CoinImage */ = {
+			isa = PBXGroup;
+			children = (
+				ADAA89082725BB3600748823 /* CoinImageView.swift */,
+				ADAA890C2725BE3200748823 /* CoinImageViewModel.swift */,
+			);
+			path = CoinImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +272,13 @@
 				AD68EF4127231BA800EAC25A /* HomeViewModel.swift in Sources */,
 				AD992E842721F8A000699A1E /* ContentView.swift in Sources */,
 				AD992E992721FC0600699A1E /* HomeView.swift in Sources */,
+				ADAA89092725BB3600748823 /* CoinImageView.swift in Sources */,
 				AD992E9F27220DFF00699A1E /* CircleButtonAnimationView.swift.swift in Sources */,
 				AD992E822721F8A000699A1E /* CryptoApp.swift in Sources */,
 				AD992E9D2721FCFD00699A1E /* CircleButtonView.swift in Sources */,
+				ADAA890B2725BCA900748823 /* CoinImageService.swift.swift in Sources */,
 				AD68EF472723435C00EAC25A /* NetworkingManager.swift in Sources */,
+				ADAA890D2725BE3200748823 /* CoinImageViewModel.swift in Sources */,
 				AD992E932721F9CC00699A1E /* Color.swift in Sources */,
 				AD68EF3D27230F3200EAC25A /* PreviewProvider.swift in Sources */,
 				AD68EF3F272312B600EAC25A /* Double.swift in Sources */,
