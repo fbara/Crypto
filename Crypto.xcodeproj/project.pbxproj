@@ -25,6 +25,7 @@
 		ADAA89092725BB3600748823 /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA89082725BB3600748823 /* CoinImageView.swift */; };
 		ADAA890B2725BCA900748823 /* CoinImageService.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA890A2725BCA900748823 /* CoinImageService.swift.swift */; };
 		ADAA890D2725BE3200748823 /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA890C2725BE3200748823 /* CoinImageViewModel.swift */; };
+		ADAA890F2725C6C000748823 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAA890E2725C6C000748823 /* LocalFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		ADAA89082725BB3600748823 /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
 		ADAA890A2725BCA900748823 /* CoinImageService.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift.swift; sourceTree = "<group>"; };
 		ADAA890C2725BE3200748823 /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
+		ADAA890E2725C6C000748823 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				AD68EF462723435C00EAC25A /* NetworkingManager.swift */,
+				ADAA890E2725C6C000748823 /* LocalFileManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				AD68EF3B27230ED300EAC25A /* CoinRowView.swift in Sources */,
 				AD68EF4127231BA800EAC25A /* HomeViewModel.swift in Sources */,
 				AD992E842721F8A000699A1E /* ContentView.swift in Sources */,
+				ADAA890F2725C6C000748823 /* LocalFileManager.swift in Sources */,
 				AD992E992721FC0600699A1E /* HomeView.swift in Sources */,
 				ADAA89092725BB3600748823 /* CoinImageView.swift in Sources */,
 				AD992E9F27220DFF00699A1E /* CircleButtonAnimationView.swift.swift in Sources */,
