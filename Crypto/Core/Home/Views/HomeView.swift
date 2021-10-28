@@ -12,6 +12,8 @@ struct HomeView: View {
     @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortfolio: Bool = false // animate to the right
     @State private var showPorfolioView: Bool = false // new sheet
+    @State private var selectedCoin: CoinModel? = nil
+    @State private var showDetailView: Bool = false
     
     var body: some View {
         
@@ -45,6 +47,11 @@ struct HomeView: View {
             }
             
         }
+        .background(
+            NavigationLink(destination: DetailLoadingView(coin: $selectedCoin),
+                           isActive: $showDetailView,
+                           label: { EmptyView() })
+        )
     }
 }
 
@@ -97,6 +104,9 @@ extension HomeView {
             ForEach(vm.allCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: false)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
         }
         .listStyle(PlainListStyle())
@@ -107,6 +117,9 @@ extension HomeView {
             ForEach(vm.portfolioCoins) { coin in
                 CoinRowView(coin: coin, showHoldingsColumn: true)
                     .listRowInsets(.init(top: 10, leading: 0, bottom: 10, trailing: 10))
+                    .onTapGesture {
+                        segue(coin: coin)
+                    }
             }
         }
         .listStyle(PlainListStyle())
@@ -170,5 +183,12 @@ extension HomeView {
         .font(.caption)
         .foregroundColor(Color.theme.secondaryText)
         .padding(.horizontal)
+    }
+    
+    private func segue(coin: CoinModel) {
+        
+        selectedCoin = coin
+        showDetailView.toggle()
+        
     }
 }
