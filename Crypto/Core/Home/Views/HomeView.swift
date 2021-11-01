@@ -40,10 +40,16 @@ struct HomeView: View {
                         .transition(.move(edge: .leading))
                 }
                 if showPortfolio {
-                    portfolioCoinsList
-                        .transition(.move(edge: .trailing))
+                    ZStack(alignment: .top) {
+                        if vm.portfolioCoins.isEmpty && vm.searchText.isEmpty {
+                            portfoloiEmptyText
+                        } else {
+                            portfolioCoinsList
+                        }
+                    }
+                    .transition(.move(edge: .trailing))
                 }
-                
+            
                 Spacer(minLength: 0)
             }
             .sheet(isPresented: $showSettingsView) {
@@ -131,6 +137,15 @@ extension HomeView {
         .listStyle(PlainListStyle())
     }
     
+    private var portfoloiEmptyText: some View {
+        Text("You haven't added any coins to your portfolio.  Click the + button to get started. 🧐")
+            .font(.callout)
+            .foregroundColor(Color.theme.accent)
+            .fontWeight(.medium)
+            .multilineTextAlignment(.center)
+            .padding(50)
+    }
+    
     private var columnTitles: some View {
         HStack {
             HStack(spacing: 4) {
@@ -152,7 +167,7 @@ extension HomeView {
                     Image(systemName: "chevron.down")
                         .opacity((vm.sortOption == .holdings || vm.sortOption == .holdingsReversed) ? 1.0 : 0.0)
                         .rotationEffect(Angle(degrees: vm.sortOption == .holdings ? 0 : 180))
-
+                    
                 }
                 .onTapGesture {
                     withAnimation(.default) {
@@ -166,7 +181,7 @@ extension HomeView {
                 Image(systemName: "chevron.down")
                     .opacity((vm.sortOption == .price || vm.sortOption == .priceReversed) ? 1.0 : 0.0)
                     .rotationEffect(Angle(degrees: vm.sortOption == .price ? 0 : 180))
-
+                
             }
             .frame(width: UIScreen.main.bounds.width / 3.5, alignment: .trailing)
             .onTapGesture {
