@@ -31,6 +31,11 @@ struct PortfolioView: View {
                 .padding()
                 .font(.headline)
             }
+            .background(
+                Color.theme.background
+                    .ignoresSafeArea()
+            )
+            
             .navigationTitle("Edit Portfolio")
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {

@@ -19,12 +19,27 @@ struct SettingsView: View {
     var body: some View {
         
         NavigationView {
-            List {
-                swiftfulSection
-                coingeckoSection
-                baralabsSection
-                applicationSection
+            ZStack {
+                // background
+                Color.theme.background
+                    .ignoresSafeArea()
+                
+                // content
+                List {
+                    swiftfulSection
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+                    coingeckoSection
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+
+                    baralabsSection
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+
+                    applicationSection
+                        .listRowBackground(Color.theme.background.opacity(0.5))
+
+                }
             }
+            
             .font(.headline)
             .accentColor(.blue)
             .listStyle(GroupedListStyle())
