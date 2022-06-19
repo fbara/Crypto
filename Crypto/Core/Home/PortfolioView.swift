@@ -10,6 +10,7 @@ import SwiftUI
 struct PortfolioView: View {
     
     @EnvironmentObject private var vm: HomeViewModel
+    @Environment(\.presentationMode) var presentationMode
     
     @State private var selectedCoin: CoinModel? = nil
     @State private var quantityText: String = ""
@@ -39,7 +40,12 @@ struct PortfolioView: View {
             .navigationTitle("Edit Portfolio")
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    XMarkButton()
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    }label: {
+                        Image(systemName: "xmark")
+                            .font(.headline)
+                    }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     trailingNavBarButton
